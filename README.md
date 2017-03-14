@@ -53,11 +53,11 @@ Définissez, implémentez et testez un Visiteur pour calculer la valeur d’une 
 La hauteur d’un arbre est la plus grande distance entre la racine de l’arbre et chacune de ses feuilles. 
 Ainsi, la hauteur de 2+x est 2 et celle de 7×(2+x) est 3.
 
-####Question 5 
+#### Question 5 
 
 Définissez, implémentez et testez un Visiteur pour calculer la hauteur de l’arbre d’une expression.
 
-####Question 6 
+#### Question 6 
 
 Définissez, implémentez et testez un Visiteur pour afficher une expression en notation infixe. 
 Il sera ici nécessaire d’utiliser des parenthèses si la priorité d’un nœud (en fait, celle de l’opérateur associé à ce nœud) est plus faible que la priorité du père de ce nœud (par exemple 7×(2+x)). 
