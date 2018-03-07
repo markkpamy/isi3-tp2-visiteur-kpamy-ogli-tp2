@@ -5,7 +5,7 @@ public class Multiplication extends OperateurBinaire{
 	}
 
 
-	public void accept(VisiteurPrefix visiteurPrefix) {
-
+	public void accept(Visiteur visiteur) {
+		visiteur.visit(this);
 	}
 }

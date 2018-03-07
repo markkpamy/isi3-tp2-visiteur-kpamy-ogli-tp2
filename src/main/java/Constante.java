@@ -4,7 +4,9 @@ public class Constante implements Noeud{
 		valeur = v;
 	}
 	public int getValeur(){return valeur;}
-	
 
 
+	public void accept(Visiteur visiteur) {
+		visiteur.visit(this);
+	}
 }

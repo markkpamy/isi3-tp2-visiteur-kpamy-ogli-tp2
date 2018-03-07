@@ -4,7 +4,7 @@ public class Addition extends OperateurBinaire{
 	}
 
 
-	public void accept(VisiteurPrefix visiteurPrefix) {
-
+	public void accept(Visiteur visiteur) {
+		visiteur.visit(this);
 	}
 }

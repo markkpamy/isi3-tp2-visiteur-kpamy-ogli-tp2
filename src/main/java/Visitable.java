@@ -1,4 +1,4 @@
 public interface Visitable {
-    void accept(VisiteurPrefix visiteurPrefix);
+    void accept(Visiteur visiteur);
 
 }
