@@ -37,5 +37,6 @@ public class ExpressionArithmetique {
 		VisiteurPrefixe visiteurPrefixe = new VisiteurPrefixe();
 		this.getRacine().accept(visiteurPrefixe);
 	}
+	//public void
 	
 }
