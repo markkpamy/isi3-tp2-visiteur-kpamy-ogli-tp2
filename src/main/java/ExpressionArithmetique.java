@@ -11,8 +11,9 @@ public class ExpressionArithmetique {
 
 	public void afficherPostFixe() {
 		System.out.println("\n postfixe:");
-		// TODO 
-		
+		// TODO
+		VisiteurPostfixe visiteurPostfixe = new VisiteurPostfixe();
+		this.getRacine().accept(visiteurPostfixe);
 	}
 
 	public int calculerValeur() {
@@ -25,9 +26,16 @@ public class ExpressionArithmetique {
 		return 0;
 	}
 	public void afficherInFixe() {
+		// TODO
 		System.out.println("\n infixe:");
-		// TODO 
-		
+		VisiteurInfixe visiteurInfixe = new VisiteurInfixe();
+		this.getRacine().accept(visiteurInfixe);
+	}
+	public void afficherPreFixe() {
+		// TODO
+		System.out.println("\n prefixe:");
+		VisiteurPrefixe visiteurPrefixe = new VisiteurPrefixe();
+		this.getRacine().accept(visiteurPrefixe);
 	}
 	
 }
