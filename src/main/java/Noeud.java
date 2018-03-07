@@ -1,5 +1,4 @@
-public interface Noeud {
+public interface Noeud extends Visitable {
 
 
-    void accept(VisiteurPrefix visiteurPrefix);
 }
