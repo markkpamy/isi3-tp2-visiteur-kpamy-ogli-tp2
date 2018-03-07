@@ -6,6 +6,7 @@
 
 ## Question 1
 *Insérer un schéma du patron de conception mis en place*
+Expliquer le pattern avec un schéma
 
 ## Question 2
 *Expliquer le code ajouté*

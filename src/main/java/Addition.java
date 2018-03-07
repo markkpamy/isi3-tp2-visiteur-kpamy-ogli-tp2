@@ -4,6 +4,7 @@ public class Addition extends OperateurBinaire{
 	}
 
 
-	
+	public void accept(VisiteurPrefix visiteurPrefix) {
 
+	}
 }

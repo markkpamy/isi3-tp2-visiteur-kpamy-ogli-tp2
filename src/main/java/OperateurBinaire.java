@@ -11,4 +11,8 @@ public abstract class OperateurBinaire  extends OperateurUnaire{
 		return opD;
 	}
 
+	public void accept(Visiteur visiteur){
+		//visiteur.visit();
+	}
+
 }
