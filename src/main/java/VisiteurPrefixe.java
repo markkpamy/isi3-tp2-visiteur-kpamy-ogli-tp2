@@ -9,9 +9,18 @@ public class VisiteurPrefixe implements Visiteur{
         negation.getOpG().accept(this);
     }
 
-    public void visit(OperateurBinaire operateurBinaire) {
+    public void visitBinaire(OperateurBinaire operateurBinaire) {
         System.out.print(operateurBinaire.getOp());
         operateurBinaire.getOpG().accept(this);
         operateurBinaire.getOpD().accept(this);
+    }
+
+    public void visit(Addition addition) {
+        visitBinaire(addition);
+//        addition.getOpG()
+    }
+
+    public void visit(Multiplication multiplication) {
+        visitBinaire(multiplication);
     }
 }

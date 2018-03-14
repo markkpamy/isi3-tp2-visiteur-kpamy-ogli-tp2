@@ -9,9 +9,19 @@ public class VisiteurInfixe implements Visiteur {
         negation.getOpG().accept(this);
     }
 
-    public void visit(OperateurBinaire operateurBinaire) {
+    public void visitBinaire(OperateurBinaire operateurBinaire) {
+        System.out.print("(");
         operateurBinaire.getOpG().accept(this);
         System.out.print(operateurBinaire.getOp());
         operateurBinaire.getOpD().accept(this);
+        System.out.print(")");
+    }
+
+    public void visit(Addition addition) {
+        visitBinaire(addition);
+    }
+
+    public void visit(Multiplication multiplication) {
+        visitBinaire(multiplication);
     }
 }

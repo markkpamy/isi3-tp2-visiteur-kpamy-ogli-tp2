@@ -1,6 +1,8 @@
 public interface Visiteur {
 
-    public void visit(OperateurBinaire operateurBinaire);
+    public void visit(Addition addition);
+
+    public void visit(Multiplication multiplication);
 
     public void visit(Constante constante);
 

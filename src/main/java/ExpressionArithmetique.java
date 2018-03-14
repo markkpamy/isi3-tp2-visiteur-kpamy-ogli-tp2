@@ -17,13 +17,17 @@ public class ExpressionArithmetique {
 	}
 
 	public int calculerValeur() {
-		// TODO 
-		return 0;
+		// TODO
+		VisiteurCalcul visiteurCalcul = new VisiteurCalcul();
+		this.getRacine().accept(visiteurCalcul);
+		return visiteurCalcul.getValeur();
 	}
 
 	public int calculerHauteur() {
-		// TODO 
-		return 0;
+		// TODO
+        VisiteurHauteur visiteurHauteur = new VisiteurHauteur();
+		this.getRacine().accept(visiteurHauteur);
+        return visiteurHauteur.getHauteur();
 	}
 	public void afficherInFixe() {
 		// TODO

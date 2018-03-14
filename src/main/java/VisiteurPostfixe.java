@@ -9,9 +9,17 @@ public class VisiteurPostfixe implements Visiteur {
         System.out.print(negation.getOp());
     }
 
-    public void visit(OperateurBinaire operateurBinaire) {
+    public void visitBinaire(OperateurBinaire operateurBinaire) {
         operateurBinaire.getOpG().accept(this);
         operateurBinaire.getOpD().accept(this);
         System.out.print(operateurBinaire.getOp());
+    }
+
+    public void visit(Addition addition) {
+        visitBinaire(addition);
+    }
+
+    public void visit(Multiplication multiplication) {
+        visitBinaire(multiplication);
     }
 }
