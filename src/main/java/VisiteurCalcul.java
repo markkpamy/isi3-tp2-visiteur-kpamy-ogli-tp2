@@ -1,7 +1,6 @@
 public class VisiteurCalcul extends VisiteurPostfixe{
 
     private int valeur;
-    private int hauteur;
 
     @Override
     public void visit(Constante constante) {

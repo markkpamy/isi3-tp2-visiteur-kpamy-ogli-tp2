@@ -17,7 +17,6 @@ public class VisiteurPrefixe implements Visiteur{
 
     public void visit(Addition addition) {
         visitBinaire(addition);
-//        addition.getOpG()
     }
 
     public void visit(Multiplication multiplication) {
