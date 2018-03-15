@@ -8,4 +8,8 @@ public class Constante implements Noeud{
 	public void accept(Visiteur visiteur) {
 		visiteur.visit(this);
 	}
+
+    public int getPriorite() {
+        return -1;
+    }
 }

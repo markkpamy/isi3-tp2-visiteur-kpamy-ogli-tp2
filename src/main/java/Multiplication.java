@@ -7,4 +7,8 @@ public class Multiplication extends OperateurBinaire{
 	public void accept(Visiteur visiteur) {
 		visiteur.visit(this);
 	}
+
+	public int getPriorite() {
+	    return 1;
+    }
 }

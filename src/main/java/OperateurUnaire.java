@@ -13,4 +13,7 @@ public abstract class OperateurUnaire implements Noeud{
 		return opG;
 	}
 
+    public int getPriorite() {
+        return 0;
+    }
 }
