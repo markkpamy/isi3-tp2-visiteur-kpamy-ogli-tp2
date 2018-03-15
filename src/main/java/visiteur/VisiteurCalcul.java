@@ -1,3 +1,7 @@
+package visiteur;
+
+import noeud.*;
+
 public class VisiteurCalcul extends VisiteurPostfixe{
 
     private int valeur;

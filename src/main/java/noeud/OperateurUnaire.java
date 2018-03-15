@@ -1,3 +1,7 @@
+package noeud;
+
+import noeud.interfaces.Noeud;
+
 public abstract class OperateurUnaire implements Noeud{
 	private String op;
 	private Noeud opG;
@@ -14,6 +18,6 @@ public abstract class OperateurUnaire implements Noeud{
 	}
 
     public int getPriorite() {
-        return 0;
+        return Priorite.OTHER.getPriorite();
     }
 }

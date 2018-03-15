@@ -1,6 +1,11 @@
+package noeud;
+
+import noeud.interfaces.Noeud;
+import visiteur.interfaces.Visiteur;
+
 public class Multiplication extends OperateurBinaire{
 
-	public Multiplication( Noeud ng, Noeud nd) {
+	public Multiplication(Noeud ng, Noeud nd) {
 		super("*", ng, nd);
 	}
 
@@ -9,6 +14,6 @@ public class Multiplication extends OperateurBinaire{
 	}
 
 	public int getPriorite() {
-	    return 1;
+	    return Priorite.MULTIPLICATION.getPriorite();
     }
 }

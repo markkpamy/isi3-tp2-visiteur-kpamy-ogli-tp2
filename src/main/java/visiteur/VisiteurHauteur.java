@@ -1,3 +1,7 @@
+package visiteur;
+
+import noeud.OperateurBinaire;
+
 public class VisiteurHauteur extends VisiteurPrefixe {
 
     private int hauteur = 0;

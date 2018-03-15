@@ -1,4 +1,9 @@
-public class Constante implements Noeud{
+package noeud;
+
+import noeud.interfaces.Noeud;
+import visiteur.interfaces.Visiteur;
+
+public class Constante implements Noeud {
 	private int valeur;
 	public Constante(int v){
 		valeur = v;
@@ -10,6 +15,6 @@ public class Constante implements Noeud{
 	}
 
     public int getPriorite() {
-        return -1;
+        return Priorite.CONSTANTE.getPriorite();
     }
 }

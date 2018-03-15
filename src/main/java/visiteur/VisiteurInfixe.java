@@ -1,4 +1,9 @@
-public class VisiteurPrefixe implements Visiteur{
+package visiteur;
+
+import noeud.*;
+import visiteur.interfaces.Visiteur;
+
+public class VisiteurInfixe implements Visiteur {
 
     public void visit(Constante constante) {
         System.out.print(constante.getValeur());
@@ -10,10 +15,17 @@ public class VisiteurPrefixe implements Visiteur{
     }
 
     public void visitBinaire(OperateurBinaire operateurBinaire) {
-        System.out.print(operateurBinaire.getOp());
+        if (operateurBinaire.getOpG().getPriorite() > -1 && operateurBinaire.getPriorite() > operateurBinaire.getOpG().getPriorite()) {
+            System.out.print("(");
+        }
         operateurBinaire.getOpG().accept(this);
+        if (operateurBinaire.getOpG().getPriorite() > -1 && operateurBinaire.getPriorite() > operateurBinaire.getOpD().getPriorite()) {
+            System.out.print(")");
+        }
+        System.out.print(operateurBinaire.getOp());
         operateurBinaire.getOpD().accept(this);
-    }
+
+        }
 
     public void visit(Addition addition) {
         visitBinaire(addition);

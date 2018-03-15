@@ -1,3 +1,8 @@
+import noeud.Addition;
+import noeud.Constante;
+import noeud.Multiplication;
+import noeud.Negation;
+
 public class TestArbreBinaire {
 
 	public static void main(String[] args) {

@@ -1,26 +1,24 @@
-public class VisiteurInfixe implements Visiteur {
+package visiteur;
+
+import noeud.*;
+import visiteur.interfaces.Visiteur;
+
+public class VisiteurPostfixe implements Visiteur {
 
     public void visit(Constante constante) {
         System.out.print(constante.getValeur());
     }
 
     public void visit(Negation negation) {
-        System.out.print(negation.getOp());
         negation.getOpG().accept(this);
+        System.out.print(negation.getOp());
     }
 
     public void visitBinaire(OperateurBinaire operateurBinaire) {
-        if (operateurBinaire.getOpG().getPriorite() > -1 && operateurBinaire.getPriorite() > operateurBinaire.getOpG().getPriorite()) {
-            System.out.print("(");
-        }
         operateurBinaire.getOpG().accept(this);
-        if (operateurBinaire.getOpG().getPriorite() > -1 && operateurBinaire.getPriorite() > operateurBinaire.getOpD().getPriorite()) {
-            System.out.print(")");
-        }
-        System.out.print(operateurBinaire.getOp());
         operateurBinaire.getOpD().accept(this);
-
-        }
+        System.out.print(operateurBinaire.getOp());
+    }
 
     public void visit(Addition addition) {
         visitBinaire(addition);

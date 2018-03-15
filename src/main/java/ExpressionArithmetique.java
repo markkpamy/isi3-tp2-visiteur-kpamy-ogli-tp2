@@ -1,3 +1,6 @@
+import noeud.interfaces.Noeud;
+import visiteur.*;
+
 public class ExpressionArithmetique {
 	private Noeud racine;
 	
